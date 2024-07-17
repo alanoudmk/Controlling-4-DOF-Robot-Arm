@@ -115,4 +115,17 @@ For this tutorial, we will be using a pre-written URDF file, so you don't need t
 
 ## Controlling the robot arm by joint_state_publisher
 
+```
+  $ roslaunch robot_arm_pkg check_motors.launch
+```
+
+Full Instructions [HERE](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/joint_state_publisher.md)
+
 ## Controlling the robot arm by Moveit and kinematics
+
+
+```
+  $ roslaunch moveit_pkg demo_gazebo.launch
+```
+
+Full Instructions [HERE](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/MoveIt.md)
