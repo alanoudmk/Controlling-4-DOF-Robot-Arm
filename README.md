@@ -56,6 +56,12 @@ Robot initial positions:
 
 > For more information, please refer to the [ROS Wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 
+***
+
+## Structuring the robot URDF:
+For this tutorial, we will be using a pre-written URDF file, so you don't need to create and build it from scratch.
+
+> Here is [How to Structure URDF]
 
 ***
 
