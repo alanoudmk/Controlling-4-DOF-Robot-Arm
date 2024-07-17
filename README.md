@@ -54,7 +54,13 @@ Robot initial positions:
   echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-For more information, please refer to the [ROS Wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+> For more information, please refer to the [ROS Wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 
 
 ***
+
+# Usage
+
+## Controlling the robot arm by joint_state_publisher
+
+## Controlling the robot arm by Moveit and kinematics
