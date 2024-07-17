@@ -114,12 +114,10 @@ To launch the Gazebo simulation with the Robot Arm Model and control the robot's
 
 ***
 
-## Establishing Communication between Gazebo and the Robot Arm
+## Establishing Communication between Gazebo and RViz
 
 To ensure proper communication of the joint states between the joint_state_publisher and the Gazebo simulation, you may need to make the necessary **Permissions* changes by running a Python script.
 
-
-The Python script joint_states_to_gazebo.py ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation:
 
 1. Navigate to the scripts folder :
 ```
