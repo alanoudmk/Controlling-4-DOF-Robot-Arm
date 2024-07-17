@@ -5,14 +5,14 @@
 
 ## Setup ROS Enviroment
 
-Before Starting Make sure you:
+Before starting, ensure that you have:
 - Created the _Catkin_ Workspace
 - Downloaded the _arduino_robot_arm_ package
 
 
 ***
 
-## Control the motors and Visualize them in RViz
+## Controlling the Motors and Visualizing them in RViz
 
 1. Open a New Terminal & Source:
 ```
@@ -26,23 +26,24 @@ Before Starting Make sure you:
 ```
 
 - It will Automatically start the ROS Master
-![image](https://github.com/user-attachments/assets/6b155b17-0014-467e-9cca-79b6e8594806)
+
+    <img src="https://github.com/user-attachments/assets/6b155b17-0014-467e-9cca-79b6e8594806" width="390" height="260">
 
 
 - You should see the robot model displayed in the RViz window:
-![image](https://github.com/user-attachments/assets/90fe9493-5fe0-46cd-ba6b-99d4ae63933d)
+
+    <img src="https://github.com/user-attachments/assets/90fe9493-5fe0-46cd-ba6b-99d4ae63933d" width="390" height="200">
 
 
 - The GUI will allow you to control the joint states using sliders to adjust the angles of different joints, and you should see the robot model update in real-time:
-![image](https://github.com/user-attachments/assets/c1c61152-4bd7-40b0-a50e-cba3f149f1bf)
+  
+    <img src="https://github.com/user-attachments/assets/c1c61152-4bd7-40b0-a50e-cba3f149f1bf" width="150" height="220">
 
 
 
 ***
 
-## Exploring the Node Communication
-
-
+### Exploring the Node Communication
 
 1. Open a New Terminal & Source:
 ```
@@ -55,25 +56,54 @@ Before Starting Make sure you:
 ```
 
 > If you encounter an ERROR, you can install the necessary packages:
->
->   ```$ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph```
+    ```
+  $ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph
+    ```
+
+   <img src="https://github.com/user-attachments/assets/b89a6a92-23bd-445f-b6dc-34496f3afb4d" width="390" height="220">
 
 
-- This will open a window displaying the nodes and topics in your ROS system:
-
+- `` /joint_state_publlsher_gul`` :  Node representing the GUI window
+- ``/robot_state_publlsher`` :Node representing the Robot Arm
+- `` /joint_sates`` :  Topic that connects the two nodes
 
 
 
 ***
 
-To see the actual values being published to the /joint_states topic, use the following command:
-```
-  rostopic echo /joint_states
-```
+### Printing Topic Actual Values
+
+1. Open a New Terminal & Source:
+    ```
+   source /opt/ros/noetic/setup.bash
+    ```
+
+2. Display the actual values being published on the /joint_states topic:
+
+    ```
+    rostopic echo /joint_states
+    ```
+
+     <img src="https://github.com/user-attachments/assets/8465197c-5ed5-4082-b7e5-014c753ea81f" width="350" height="200">
+
+
+
+3. Now, move the robot arm by adjusting the angles of the joints using the GUI:
+
+   <img src="https://github.com/user-attachments/assets/cf51a79b-d0dc-44b3-8407-6356ace51a70" width="350" height="200">
+   <img src="https://github.com/user-attachments/assets/32b7923a-d280-4b1e-a1b5-2a04bba49b87" width="130" height="200">
+
+
+4. Click _Center_ to return the robot arm to its initial position:
+
+   <img src="https://github.com/user-attachments/assets/776e61e5-8964-45a2-a2bb-ea7361dfad39" width="350" height="200">
+   <img src="https://github.com/user-attachments/assets/8bf8c20d-05d9-459c-8624-a91e998bcf6d" width="130" height="200">
+
 
 ***
 
 ## Launching the Simulation in Gazebo
+
 The following command will launch Gazebo with the robot model and use the joint_state_publisher` to control the joints of the robot in the simulation:
 ```
   roslaunch robot_arm_pkg check_motors_gazebo.launch
