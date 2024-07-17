@@ -21,3 +21,40 @@ Robot initial positions:
 
 <img src="https://github.com/user-attachments/assets/52a06f9f-15c9-4fee-aa1f-b1694d5fbb9b" width="390" height="280">
 
+
+***
+
+# Preparing ROS
+
+## Create a Workspace:
+
+1. Source the ROS Noetic setup file:
+```
+  $ source /opt/ros/noetic/setup.bash
+  $ echo $ROS_DISTRO
+```
+  - The output should be "noetic".
+    
+2. Create and build a Catkin workspace:
+```
+  mkdir -p ~/catkin_ws/src
+  cd ~/catkin_ws/
+  catkin_make
+```
+
+3. Source the workspace:
+```
+  $ source devel/setup.bash
+  $ cd devel/
+  $ source setup.bash
+```
+
+4. Add the workspace to your .bashrc to source it automatically:
+```
+  echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
+
+For more information, please refer to the [ROS Wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+
+
+***
