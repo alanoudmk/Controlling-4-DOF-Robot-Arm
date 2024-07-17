@@ -103,20 +103,39 @@ Before starting, ensure that you have:
 
 ***
 
-## Launching the Simulation in Gazebo
+# Launching the Simulation in Gazebo
 
-The following command will launch Gazebo with the robot model and use the joint_state_publisher` to control the joints of the robot in the simulation:
+To launch the Gazebo simulation with the Robot Arm Model and control the robot's joints, run:
+
 ```
   roslaunch robot_arm_pkg check_motors_gazebo.launch
 ```
-
+ - This command will start the Gazebo simulation with the _Robot Arm Model_ and enable the _joint_state_publisher_ to control the robot's joints.
 
 ***
 
-## Running the Python Script
+## Establishing Communication between Gazebo and the Robot Arm
+
+To ensure proper communication of the joint states between the joint_state_publisher and the Gazebo simulation, you may need to make the necessary **Permissions* changes by running a Python script.
+
+
 The Python script joint_states_to_gazebo.py ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation:
+
+1. Navigate to the scripts folder :
 ```
   cd ~/catkin_ws/src/arduino_robot_arm/robot_arm_pkg/scripts
+```
+
+2. Make it executable:
+
+```
   sudo chmod +x joint_states_to_gazebo.py
+```
+
+3. Launch the script:
+```
   rosrun robot_arm_pkg joint_states_to_gazebo.py
 ```
+
+
+- This Python script, joint_states_to_gazebo.py, ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation, allowing for seamless control of the robot arm's joints.
