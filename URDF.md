@@ -8,35 +8,38 @@ URDF (Unified Robot Description Format) is:
 - Meters (m)  used to specify the linear dimensions and positions of robot links and joints.
 
 
-**
+***
 
 ## URDF Components
+1. Robot:
+   - The root element of the URDF file, which defines the name of the robot.
+2. Link:
+   - Represents a rigid body part of the robot, such as a base, arm, or wheel. Each link has visual, collision, and inertial properties.
+3. Joint:
+   - Defines the connection between two links, specifying the type of joint (e.g., revolute, prismatic, fixed), the axis of rotation/translation, and the limits of the joint's motion.
+4. Transmission: 
+   - Describes the relationship between the joint and the actuator that drives it, such as the gear ratio and mechanical reduction.
+5. Material:
+    - Defines the visual materials (e.g., colors, textures) assigned to the robot's links.
+6. Mimic:
+    - Allows one joint to mimic the motion of another joint, useful for coordinating the motion of multiple joints.
+7. Dynamics:
+    - Defines the dynamic properties of the links, such as mass, inertia, and friction coefficients
+8. Gazebo:
+    - Specifies the plugins and sensor information required for simulation in the Gazebo environment.
+9. Plugin:
+    - Allows the integration of custom functionality, such as controllers, sensors, and other extensions.
 
-Links: - Represent the rigid bodies of the robot. - Each link can have visual, collision, and inertial properties.
-Joints: - Define the relationship between two links. - Can specify different types of joints, such as fixed, revolute, prismatic, and continuous.
-Visuals: - Describe how the link should be displayed in simulations and visualization tools.
-Collisions: - Define the collision properties for physical simulations and interactions.
-Inertials: - Specify the mass and inertia properties for dynamic simulations.
-Sensors and Actuators: - Describe the sensors and actuators attached to the robot.
-The URDF format allows for the creation of detailed and accurate robot models that can be used in various ROS applications, such as simulations, visualizations, and motion planning.
+  <img src="https://github.com/user-attachments/assets/4a3ec6b2-a217-439f-84fb-117a729aea3a" width="200" height="250">
+   <img src="https://github.com/user-attachments/assets/03c6043d-8118-4c56-98a6-186cc7a57d4b" width="200" height="250">
 
-
-
-
-The key points for structuring a robot's URDF (Unified Robot Description Format) are:
-
-- Robot Element: The top-level <robot> element contains the entire description of the robot.
-- Link Elements: Each physical component of the robot is described using a <link> element, which specifies the visual, collision, and inertial properties of that component.
-- Joint Elements: The connections between the robot's links are defined using <joint> elements, which specify the type of joint (e.g. revolute, prismatic) and the parameters that govern its motion.
-- Transmission Elements: If the robot has actuated joints, <transmission> elements are used to describe the relationship between the actuator and the joint.
-- Gazebo Extensions: If the robot will be simulated in Gazebo, additional <gazebo> elements can be used to specify Gazebo-specific properties.
 
 
 ***
 # How to Create UEDF?
 
 
-## Manually create a URDF 
+## Manually  
 
 Example of how to manually create a URDF (Unified Robot Description Format) file for a simple robot model. URDF is an XML-based format used to describe the components and kinematics of a robot.
 
@@ -71,3 +74,4 @@ Here's a general outline of the process:
   6. Export to URDF: Once the robot model is complete, export the scene to a URDF file.
 
 > Step by Step: [Structuring the Robot by Using Blender](https://drive.google.com/file/d/13Zwar6_7NBtJJoh1Uhmcws74_DmFbx__/view)
+> [From Blender to URDF with Phobos](https://www.youtube.com/watch?v=JGPyNxzVlYA&t=222s)
