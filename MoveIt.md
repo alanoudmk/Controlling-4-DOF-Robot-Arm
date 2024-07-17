@@ -20,3 +20,20 @@ Before starting, ensure that you have:
 ```
 
 2.
+
+
+***
+
+## RViz with MoveIt:
+RViz with MoveIt is used for motion planning and visualization of the robot arm.
+
+```
+  roslaunch moveit_pkg demo.launch
+``` 
+
+***
+
+## Gazebo with MoveIt:
+```
+roslaunch moveit_pkg demo_gazebo.launch
+```
