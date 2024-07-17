@@ -58,7 +58,7 @@ Robot initial positions:
 
 ***
 
-## 2. Structuring the robot URDF:
+## 2. Structure the Robot URDF
 For this tutorial, we will be using a pre-written URDF file, so you don't need to create and build it from scratch.
 
 > Here is [How to Structure URDF](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/URDF.md).
