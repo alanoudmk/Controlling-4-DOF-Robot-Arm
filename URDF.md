@@ -74,4 +74,5 @@ Here's a general outline of the process:
   6. Export to URDF: Once the robot model is complete, export the scene to a URDF file.
 
 > Step by Step: [Structuring the Robot by Using Blender](https://drive.google.com/file/d/13Zwar6_7NBtJJoh1Uhmcws74_DmFbx__/view)
+>
 > [From Blender to URDF with Phobos](https://www.youtube.com/watch?v=JGPyNxzVlYA&t=222s)
