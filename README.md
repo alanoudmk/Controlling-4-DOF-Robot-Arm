@@ -26,7 +26,7 @@ Robot initial positions:
 
 # Preparing ROS
 
-## Create a Workspace:
+## 1. Create a Workspace
 
 1. Source the ROS Noetic setup file:
 ```
@@ -58,7 +58,7 @@ Robot initial positions:
 
 ***
 
-## Structuring the robot URDF:
+## 2. Structuring the robot URDF:
 For this tutorial, we will be using a pre-written URDF file, so you don't need to create and build it from scratch.
 
 > Here is [How to Structure URDF](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/URDF.md).
@@ -67,6 +67,50 @@ For this tutorial, we will be using a pre-written URDF file, so you don't need t
 
 ***
 
+## 3. Install the arduino_robot_arm Package
+
+1. Navigate to the src folder of your workspace:
+```
+  cd ~/catkin_ws/src
+```
+
+2. Install Git if you haven't already:
+```
+  sudo apt install git
+```
+
+3. Clone the arduino_robot_arm repository:
+```
+  git clone https://github.com/smart-methods/arduino_robot_arm
+```
+
+4. Install Dependencies:
+```
+  cd ~/catkin_ws
+  rosdep install --from-paths src --ignore-src -r -y
+  sudo apt-get install ros-noetic-moveit
+  sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
+  sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
+  sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
+```
+
+5. Compile the catkin workspace:
+```
+  catkin_make
+```
+
+6. Verify Installation:
+```
+  rospack list
+```
+
+- You should see the arduino_robot_arm package listed among the other ROS packages after a successful compilation.
+
+
+
+
+
+***
 # Usage
 
 ## Controlling the robot arm by joint_state_publisher
