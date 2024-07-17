@@ -43,7 +43,7 @@ Before starting, ensure that you have:
 
 ***
 
-#### Exploring the Node Communication
+### Exploring the Node Communication
 
 1. Open a New Terminal & Source:
 ```
@@ -58,7 +58,7 @@ Before starting, ensure that you have:
 > If you encounter an ERROR, you can install the necessary packages:
 
     ```
-  $ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph
+    $ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph
     ```
 
    <img src="https://github.com/user-attachments/assets/b89a6a92-23bd-445f-b6dc-34496f3afb4d" width="390" height="220">
@@ -72,7 +72,7 @@ Before starting, ensure that you have:
 
 ***
 
-#### Printing Topic Actual Values
+### Printing Topic Actual Values
 
 1. Open a New Terminal & Source:
     ```
