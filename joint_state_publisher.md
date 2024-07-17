@@ -57,9 +57,9 @@ Before starting, ensure that you have:
 
 > If you encounter an ERROR, you can install the necessary packages:
 
-    ```
-    $ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph
-    ```
+  ```
+   $ sudo apt install ros-noetic-rqt ros-noetic-rqt-graph
+   ```
 
    <img src="https://github.com/user-attachments/assets/b89a6a92-23bd-445f-b6dc-34496f3afb4d" width="390" height="220">
 
