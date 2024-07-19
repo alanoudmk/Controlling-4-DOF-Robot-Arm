@@ -141,9 +141,9 @@ To ensure proper communication of the joint states between the joint_state_publi
 ```
 
 
-   <img src="https://github.com/user-attachments/assets/71cd3876-1e93-4cd3-bd11-408e81944287" width="600" height="400">
+   <img src="https://github.com/user-attachments/assets/71cd3876-1e93-4cd3-bd11-408e81944287" width="650" height="360">
 
-   <img src="https://github.com/user-attachments/assets/85124747-6b4c-43e7-bb08-46f103ee84ea" width="600" height="400">
+   <img src="https://github.com/user-attachments/assets/85124747-6b4c-43e7-bb08-46f103ee84ea" width="650" height="360">
 
 
 - This Python script, joint_states_to_gazebo.py, ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation, allowing for seamless control of the robot arm's joints.
