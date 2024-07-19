@@ -119,21 +119,28 @@ To launch the Gazebo simulation with the Robot Arm Model and control the robot's
 To ensure proper communication of the joint states between the joint_state_publisher and the Gazebo simulation, you may need to make the necessary **Permissions* changes by running a Python script.
 
 
-1. Navigate to the scripts folder :
+1. Open a New Terminal & Source:
+```
+  source /opt/ros/noetic/setup.bash
+  source ~/catkin_ws/devel/setup.bash
+```
+
+2. Navigate to the scripts folder :
 ```
   cd ~/catkin_ws/src/arduino_robot_arm/robot_arm_pkg/scripts
 ```
 
-2. Make it executable:
+3. Make it executable:
 
 ```
   sudo chmod +x joint_states_to_gazebo.py
 ```
 
-3. Launch the script:
+4. Launch the script:
 ```
   rosrun robot_arm_pkg joint_states_to_gazebo.py
 ```
+  - This Python script, joint_states_to_gazebo.py, ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation, allowing for seamless control of the robot arm's joints.
   - If does not work, try this:
     
 ```
@@ -145,5 +152,4 @@ To ensure proper communication of the joint states between the joint_state_publi
 
    <img src="https://github.com/user-attachments/assets/85124747-6b4c-43e7-bb08-46f103ee84ea" width="650" height="360">
 
-
-- This Python script, joint_states_to_gazebo.py, ensures that the joint states from the joint_state_publisher are properly communicated to the Gazebo simulation, allowing for seamless control of the robot arm's joints.
+- Now that you have successfully established communication, you can use the RViz GUI to move the Robot Arm and see the changes in both RViz and Gazebo.
