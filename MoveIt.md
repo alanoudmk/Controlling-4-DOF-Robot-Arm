@@ -19,21 +19,11 @@ Before starting, ensure that you have:
   source ~/catkin_ws/devel/setup.bash
 ```
 
-2.
-
-
-***
-
-## RViz with MoveIt:
-RViz with MoveIt is used for motion planning and visualization of the robot arm.
+2. Launch RViz with the MoveIt configuration. 
+  - MoveIt provides motion planning and visualization capabilities for the robot arm.
 
 ```
   roslaunch moveit_pkg demo.launch
 ``` 
 
-***
-
-## Gazebo with MoveIt:
-```
-roslaunch moveit_pkg demo_gazebo.launch
-```
+<img src="https://github.com/user-attachments/assets/b3389c08-aa25-4f24-a85d-7227b3d160bd" width="650" height="340">
