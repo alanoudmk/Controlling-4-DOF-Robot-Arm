@@ -4,7 +4,7 @@ This tutorial will guide you through the process of controlling a 4-DOF robot ar
 We will be working on:
   - ROS Noetic 20.04
   - [Arduino Robot Arm](https://github.com/smart-methods/arduino_robot_arm) Package
-  - Using MoveIt and Joint State Publisher Simulation
+  - Using MoveIt and RViz (Joint State Publisher) Simulation
 
 
 ***
