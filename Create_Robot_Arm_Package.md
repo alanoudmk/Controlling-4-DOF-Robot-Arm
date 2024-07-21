@@ -104,7 +104,8 @@ You can use the already built-in URDF, but here are some tutorials for more know
 ***
 
 
-## 4. Install dependences (by binary or source):
+## 4. Install dependences:
+You can choose to install the dependencies either using binary packages or by building from source, depending on your preference.
 
 1. joint-state-publisher
  - To install package by binary:
@@ -159,7 +160,7 @@ You can use the already built-in URDF, but here are some tutorials for more know
 ***
 
 
-## Copy URDF and meshes files from ROS1 package
+## 5. Copy URDF and meshes files from ROS1 package:
 
 1. [URDF](https://github.com/smart-methods/arduino_robot_arm/blob/main/robot_arm_pkg/urdf/arduino_robot_arm.urdf).
  - Download the URDF file from the ROS1 package:
@@ -191,7 +192,7 @@ You can use the already built-in URDF, but here are some tutorials for more know
 ***
 
 
-## Create launch file
+## 6. Create launch file:
 
 1. Create a new directory:
 ```
@@ -212,7 +213,7 @@ For [more info](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creat
 ***
 
 
-## Configure package files and rviz file as needed:
+## 7. Configure package files and rviz file as needed:
 
 Remember to rebuild your ROS 2 workspace after making changes to the package files or adding new files:
 
