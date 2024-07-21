@@ -27,3 +27,14 @@ Before starting, ensure that you have:
 ``` 
 
 <img src="https://github.com/user-attachments/assets/b3389c08-aa25-4f24-a85d-7227b3d160bd" width="650" height="340">
+
+
+3. Test
+- Click on: 
+  > Approx IK Solutions
+
+- Change the Goal State: 
+  > Goal State  ->  <rando>
+
+- To start the simulation, click on: 
+  > Commands  -> Plane
