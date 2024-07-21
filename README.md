@@ -1,12 +1,14 @@
 # Controlling Four Degrees of Freedom Robot Arm 
 This tutorial will guide you through the process of controlling a 4-DOF robot arm in ROS Noetic using the MoveIt framework and the Joint State Publisher simulation tool. The goal is to demonstrate how to plan and execute robotic arm movements in a simulated environment.
 
+You will also learn how to create your own package and set it up on ROS Foxy.
+
 Enviorment:
   - ROS Distro: Noetic 20.04
   - OS  Version: Ubuntu 20.04.6
   - [Arduino Robot Arm](https://github.com/smart-methods/arduino_robot_arm) Package
   - Using MoveIt and RViz (Joint State Publisher) Simulation
-  - Binary build
+  - Binary and Source build
 
 
 ***
