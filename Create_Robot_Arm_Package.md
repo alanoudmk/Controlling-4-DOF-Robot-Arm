@@ -1,7 +1,5 @@
 # Create Robot Arm Package
- on ros 2 foxy
-
-
+Here are the step-by-step instructions for creating a Robot Arm package in ROS 2 Foxy.
 
 ***
 
@@ -79,7 +77,7 @@ For [more info](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries
   source install/local_setup.bash
 ```
 
-5. Examine pakage content:
+5. Examine the package content:
 ```
   cd
   cd Robot_Arm_pkg
@@ -96,7 +94,7 @@ For [more info](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries
 
 ## 3. URDF Tutorial 
 
-we will be using an alredy built in URDF, but here is som etutorials for more knowaldege:
+You can use the already built-in URDF, but here are some tutorials for more knowledge:
 
 - [Building a visual robot model from scratch](https://docs.ros.org/en/foxy/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html).
 - [Learning URDF Step by Step](https://github.com/ros/urdf_tutorial/tree/ros2).
@@ -109,12 +107,49 @@ we will be using an alredy built in URDF, but here is som etutorials for more kn
 ## 4. Install dependences (by binary or source):
 
 1. joint-state-publisher
+ - To install package by binary:
+   ```
+   $ sudo apt-get install ros-foxy-joint-state-publisher
+   ```
+ - To install package from source:
+   ```
+   $ cd ~/ros2_ws/src
+   $ git clone https://github.com/ros/joint_state_publisher.git
+   $ cd ~/ros2_ws
+   $ colcon build --packages-select joint_state_publisher
+   $ source install/local_setup.bash
+   ```
+
 
 
 2. joint-state-publisher-gui 
+ - To install package by binary:
+   ```
+   $ sudo apt-get install ros-foxy-joint-state-publisher-gui
+   ```
+ - To install package from source:
+   ```
+   $ cd ~/ros2_ws/src
+   $ git clone https://github.com/ros/joint_state_publisher.git
+   $ cd ~/ros2_ws
+   $ colcon build --packages-select joint_state_publisher_gui
+   $ source install/local_setup.bash
+   ```
 
 
 3. urdf-launch
+ - To install package by binary:
+   ```
+   $ sudo apt-get install ros-foxy-urdf-launch
+   ```
+ - To install package from source:
+   ```
+   $ cd ~/ros2_ws/src
+   $ git clone https://github.com/ros/urdf_tutorial.git
+   $ cd ~/ros2_ws
+   $ colcon build --packages-select urdf_launch
+   $ source install/local_setup.bash
+   ```
 
 
 
@@ -126,12 +161,30 @@ we will be using an alredy built in URDF, but here is som etutorials for more kn
 
 ## Copy URDF and meshes files from ROS1 package
 
-- [RDF](https://github.com/smart-methods/arduino_robot_arm/blob/main/robot_arm_pkg/urdf/arduino_robot_arm.urdf).
+1. [URDF](https://github.com/smart-methods/arduino_robot_arm/blob/main/robot_arm_pkg/urdf/arduino_robot_arm.urdf).
+ - Download the URDF file from the ROS1 package:
+```
+ $ cd ~/ros2_ws/src/Robot_Arm_pkg/
+ $ mkdir urdf
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/urdf/arduino_robot_arm.urdf -O urdf/arduino_robot_arm.urdf
+```
 
-- [meshes](https://github.com/smart-methods/arduino_robot_arm/tree/main/robot_arm_pkg/meshes/stl).
 
-
-
+2. [meshes](https://github.com/smart-methods/arduino_robot_arm/tree/main/robot_arm_pkg/meshes/stl).
+ - Create the meshes directory and download the mesh files from the ROS1 package:
+```
+ $ cd ~/ros2_ws/src/Robot_Arm_pkg/
+ $ mkdir meshes
+ $ cd meshes
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/base_link.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link1.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link2.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link3.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link4.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link5.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/link6.stl
+ $ wget https://raw.githubusercontent.com/smart-methods/arduino_robot_arm/main/robot_arm_pkg/meshes/stl/gripper_link.stl
+```
 
 
 
@@ -140,6 +193,14 @@ we will be using an alredy built in URDF, but here is som etutorials for more kn
 
 ## Create launch file
 
+1. Create a new directory:
+```
+ mkdir launch
+```
+
+2. Write the launch file:
+ - copy and pate the [File](https://github.com/ros/urdf_tutorial/blob/ros2/launch/display.launch.py).
+ - Edit the file as needed to fit your requirements. For example, you may need to update the paths to the URDF and mesh files.
 
 For [more info](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
 
@@ -151,4 +212,20 @@ For [more info](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creat
 ***
 
 
-## Configure package files and rviz file as needed
+## Configure package files and rviz file as needed:
+
+Remember to rebuild your ROS 2 workspace after making changes to the package files or adding new files:
+
+```
+ $ cd ~/ros2_ws
+ $ colcon build
+ $ source install/local_setup.bash
+```
+
+
+1. Edit the Package File:
+ - Open the ``package.xml`` file in the Robot_Arm_pkg directory and make any necessary changes, such as adding dependencies or modifying the package information.
+
+2. Edit the RViz File:
+ - If you need to customize the RViz visualization, you can create a new RViz configuration file in the Robot_Arm_pkg directory or modify an existing one.
+
