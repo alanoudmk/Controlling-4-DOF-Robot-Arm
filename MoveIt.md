@@ -38,3 +38,6 @@ Before starting, ensure that you have:
 
 - To start the simulation, click on: 
   > Commands  -> Plane
+
+
+https://github.com/user-attachments/assets/d3ed605f-d86b-4bd5-a3b7-673bd7da9fb1
