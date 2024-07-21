@@ -131,3 +131,9 @@ Full Instructions [HERE](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Ar
 ```
 
 Full Instructions [HERE](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/MoveIt.md)
+
+
+***
+
+# Create Your Own Robot Arm Package
+[Here](https://github.com/alanoudmk/Controlling-4-DOF-Robot-Arm/blob/main/Create_Robot_Arm_Package.md) are the step-by-step instructions for creating a Robot Arm package in ROS 2 Foxy.
